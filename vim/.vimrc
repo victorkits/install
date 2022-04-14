@@ -13,8 +13,16 @@ set nobackup
 set undodir=~/.vim/undodir
 set undofile
 set incsearch
+set mouse=a
+set ruler
+" set cursorline 
+set relativenumber
+set scrolloff=7
+set background=dark
+set sidescrolloff=5
 
-set colorcolumn=80
+
+" set colorcolumn=80
 
 highlight ColorColumn ctermbg=0 guibg=lightgray
 set nocompatible              " required
@@ -41,13 +49,22 @@ Plugin 'jaredgorski/spacecamp'
 Plugin 'jiangmiao/auto-pairs'
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
-
+Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'tmhedberg/SimpylFold'
 let g:SimpylFold_docstring_preview=1
+
+"call plug
+"Plug 'voldikss/vim-floaterm'
+"call plug
+
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
 filetype plugin indent on    " required
+
+colorscheme PaperColor
+
+
 "map <C-n> :NERDTreeToggle<CR>
 nnoremap <silent> <F2> :NERDTreeToggle /home/mlad/<CR>
 
@@ -61,22 +78,20 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-Plugin 'vim-scripts/indentpython.vim'
-let python_highlight_all=1
-" Enable folding
+"Plugin 'vim-scripts/indentpython.vim'
+"let python_highlight_all=1
+"" Enable folding
 set foldmethod=indent
 set foldlevel=99
 
-"Syntaxing checkinh/hilighting:
-Plugin 'vim-syntastic/syntastic'
-Plugin 'tpope/vim-fugitive'
+""Syntaxing checkinh/hilighting:
+"Plugin 'vim-syntastic/syntastic'
+"Plugin 'tpope/vim-fugitive'
 
 " Enable folding with the spacebar
-nnoremap <space> za
+"nnoremap <space> za
 
 let g:airline#extensions#tabline#enabled = 1
 let g:airline_powerline_fonts = 1
-colorscheme gruvbox
+"colorscheme gruvbox
 set bg=dark
-
-
